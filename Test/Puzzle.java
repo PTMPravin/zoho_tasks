@@ -7,23 +7,27 @@ public class Puzzle {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter The Row : ");
-        int row = scanner.nextInt();
+        int row = 6;
         System.out.println("Enter The Column : ");
-        int column = scanner.nextInt();
+        int column = 5;
         System.out.println("Enter The Player Position");
-        int playerRowPosition = scanner.nextInt();
-        int playerColumnPosition = scanner.nextInt();
+        // int playerRowPosition = scanner.nextInt();
+        // int playerColumnPosition = scanner.nextInt();
         System.out.println("Enter The Gold Position");
-        int goldRowPosition = scanner.nextInt();
-        int goldColumnPosition = scanner.nextInt();
+        // int goldRowPosition = scanner.nextInt();
+        // int goldColumnPosition = scanner.nextInt();
 
         char board[][] = new char[row][column];
-        board[playerRowPosition][playerColumnPosition] = 'P';
-        board[goldRowPosition][goldColumnPosition] = 'G';
+        // board[playerRowPosition][playerColumnPosition] = 'P';
+        // board[goldRowPosition][goldColumnPosition] = 'G';
+
+        board[5][4] = 'P';
+        board[1][4] = 'G';
         int checked[][] = new int[row][column];
 
         List<Integer> list = new ArrayList<>();
-        helper(list, board, checked, playerRowPosition, playerColumnPosition, 0);
+        // helper(list, board, checked, playerRowPosition, playerColumnPosition, 0);
+        helper(list, board, checked, 5, 4, 0);
         System.out.println(list.get(0));
 
     }
